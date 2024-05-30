@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: wm36fjpxl-python-gitops
+  description: This is GitOps manifest for wm36fjpxl-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: wm36fjpxl-python
+    janus-idp.io/tekton: wm36fjpxl-python 
+    backstage.io/kubernetes-id: wm36fjpxl-python 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:wm36fjpxl-python
